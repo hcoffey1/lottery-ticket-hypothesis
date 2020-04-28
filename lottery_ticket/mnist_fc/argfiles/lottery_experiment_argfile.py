@@ -18,8 +18,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import sys
+sys.path.append('../../')
 from absl import app
 from lottery_ticket.mnist_fc import constants
+#import constants.py
 
 
 def main(argv):

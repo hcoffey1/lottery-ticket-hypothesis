@@ -75,14 +75,14 @@ def restore_network(filename):
   Raises:
     ValueError: If filename does not exist.
   """
-  if not tf.io.gfile.Exists(filename):
+  if not tf.io.gfile.exists(filename):
     raise ValueError('Filename {} does not exist.'.format(filename))
 
   weights_dict = {}
 
-  for basename in tf.io.gfile.ListDirectory(filename):
+  for basename in tf.compat.v1.gfile.ListDirectory(filename):
     name = basename.split('.')[0]
-    with tf.io.gfile.FastGFile(os.path.join(filename, basename)) as fp:
+    with tf.compat.v1.gfile.FastGFile(os.path.join(filename, basename)) as fp:
       weights_dict[name] = np.load(fp)
 
   return weights_dict

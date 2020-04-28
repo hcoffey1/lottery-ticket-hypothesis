@@ -19,8 +19,12 @@ from __future__ import division
 from __future__ import print_function
 
 import fire
-from lottery_ticket.mnist_fc import lottery_experiment
-
+#from lottery_ticket.mnist_fc import lottery_experiment
+import sys
+#sys.path.append("/home/hayden/school/grad/cs525/lottery-ticket-hypothesis/lottery_ticket/mnist_fc")
+sys.path.append('/home/hayden/school/grad/cs525/lottery-ticket-hypothesis/lottery_ticket/mnist_fc')
+sys.path.append('.')
+import lottery_experiment
 
 def main(_=None):
   fire.Fire(lottery_experiment.train)

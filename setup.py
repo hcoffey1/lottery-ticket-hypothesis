@@ -29,7 +29,7 @@ DEPENDENCIES = [
 ]
 
 VERSION = '1'
-URL = 'https://github.com/brain-research/lottery-ticket'
+URL = 'https://github.com/google-research/lottery-ticket'
 
 setup(
     name='lottery-ticket',
